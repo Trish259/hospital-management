@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+
+  <h3>Add Doctor</h3>
+  <form id="doctorForm">
+    <input type="text" id="dname" placeholder="Doctor Name"><br>
+    <input type="text" id="specialty" placeholder="Specialty"><br>
+    <input type="text" id="slots" placeholder="Available Slots (comma-separated)"><br>
+    <input type="text" id="contact" placeholder="Contact Info"><br>
+    <button type="submit">Add Doctor</button>
+  </form>
+
+  <h3>View All Appointments</h3>
+  <button onclick="getAppointments()">Load Appointments</button>
+  <ul id="appointmentsList"></ul>
+
+  <h3>View Messages</h3>
+  <button onclick="getMessages()">Load Messages</button>
+  <ul id="messagesList"></ul>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("doctorForm").addEventListener("submit", addDoctor);
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Welcome, User</h2>
+
+  <h3>Book Appointment</h3>
+  <form id="appointmentForm">
+    <input type="text" id="doctorId" placeholder="Doctor ID" required><br>
+    <input type="text" id="date" placeholder="Appointment Date" required><br>
+    <input type="text" id="description" placeholder="Description" required><br>
+    <button type="submit">Book</button>
+  </form>
+
+  <h3>Send Message</h3>
+  <form id="messageForm">
+    <textarea id="messageText" placeholder="Your message"></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("appointmentForm").addEventListener("submit", bookAppointment);
+    document.getElementById("messageForm").addEventListener("submit", sendMessage);
+  </script>
+</body>
+</html>
